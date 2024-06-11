@@ -11,6 +11,7 @@ namespace Assignment.Repository.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            
             migrationBuilder.CreateTable(
                 name: "crew",
                 columns: table => new
@@ -377,11 +378,13 @@ namespace Assignment.Repository.Migrations
                 column: "ingredient_name",
                 unique: true,
                 filter: "[ingredient_name] IS NOT NULL");
+            
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            
             migrationBuilder.DropTable(
                 name: "chef");
 
@@ -426,6 +429,7 @@ namespace Assignment.Repository.Migrations
 
             migrationBuilder.DropTable(
                 name: "menu");
+            
         }
     }
 }
